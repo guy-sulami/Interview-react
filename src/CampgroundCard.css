@@ -1,0 +1,11 @@
+.card{
+    padding: 0;
+}
+
+@media (min-width:768px){
+    #image{
+        object-fit: cover;
+        height: 200px;
+        width: 100%;
+    }
+}
