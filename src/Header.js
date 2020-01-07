@@ -1,33 +1,22 @@
 import React from 'react'
 import Hyperlink from './Hyperlink'
-import NavItem from './NavItem';
+import Icon from './Icon'
+import InputForm from './InputForm'
 
-const Header = () => {
+const Header = (props) => {
     return (
-        <nav className="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-            <Hyperlink customClassName="navbar-brand" link="/" text="YelpCamp"/>
-            {/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" 
-            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span className="navbar-toggler-icon"></span>
-            </button> */}
-            <div className="collapse navbar-collapse" id="navbarCollapse">
-                <ul className="navbar-nav mr-auto">
-                    <NavItem customClassName="nav-item active">
-                        <Hyperlink customClassName="nav-link" link="/" text="Home"/>
-                    </NavItem>
-                </ul>
-                <ul className="navbar-nav navbar-right">
-                    <NavItem customClassName="nav-item">
-                        <Hyperlink customClassName="nav-link" link="/" text="Login" />   
-                    </NavItem>
-                    <NavItem customClassName="nav-item">
-                        <Hyperlink customClassName="nav-link" link="/" text="Sign Up" />
-                    </NavItem>
-                </ul>
+        <header className="jumbotron">
+            <div className="container">
+                <h1><Icon type="" icon="campground"/>Welcome to YelpCamp!</h1>
+                <p>View our hand-picked campgrounds from all over the world</p>
+                <p>
+                    <Hyperlink customClassName="btn btn-primary btn-lg" link="/" text="Add New Campground" />
+                </p>
+                <InputForm onSearch={props.onSearch} />
+                <p></p>    
             </div>
-        </nav>
+        </header>
     );
-}
+};
 
 export default Header;
-

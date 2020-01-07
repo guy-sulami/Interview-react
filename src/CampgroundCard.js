@@ -2,6 +2,7 @@ import React from 'react'
 import Hyperlink from './Hyperlink'
 import Icon from './Icon'
 import './CampgroundCard.css'
+import Stars from './Stars';
 
 const CampgroundCard = (props) => {
     return(
@@ -13,12 +14,7 @@ const CampgroundCard = (props) => {
                 <div>
                     <Icon type="badge label-primary" icon="thumbs-up" numOfLikes={props.numOfLikes}/>
                 </div>
-                {/* this: */}
-                <em className="float-left">No Reviews Yet</em>
-                {/* OR */}
-                {/* <div class="float-left">
-                    <Icon type="fas fa-star checked"/>
-                </div> */}
+                <Stars checkedStarsCount={props.checkedStarsCount}/>
                 <div className="float-right">
                     <Hyperlink customClassName="btn btn-sm btn-primary" link="/" text="More Info"/>
                 </div>

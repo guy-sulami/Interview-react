@@ -2,7 +2,7 @@ import React from 'react'
 
 const Icon = (props) => {
     return(
-        <span className={props.type}><i className={`fas fa-${props.icon}`}></i> {props.numOfLikes}</span>
+        <span style={{color: props.color, marginInlineEnd: '5px'}} className={props.type}><i className={`fas fa-${props.icon}`}></i> {props.numOfLikes}</span>
     );
 };
 

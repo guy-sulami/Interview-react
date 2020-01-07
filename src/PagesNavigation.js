@@ -2,7 +2,7 @@ import React from 'react'
 import NavItem from './NavItem'
 import Hyperlink from './Hyperlink'
 
-const Pagination = () => {
+const PagesNavigation = () => {
     return (
         <nav aria-label="Page navigation">
             <ul className="pagination justify-content-center">
@@ -29,4 +29,4 @@ const Pagination = () => {
     );
 }
 
-export default Pagination;
+export default PagesNavigation;
